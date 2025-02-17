@@ -1,0 +1,72 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Scripts GitLab</title>
+    <link rel="stylesheet" href="./src/css/index.css">
+</head>
+<body>
+    <div class="titulo">
+        <img src="./src/img/Gitlab.jpg" alt="GitLab">
+        <h1>GitLab Script Generator</h1>
+    </div>
+    <div class="container">
+        <!-- Formulario de configuración -->
+        <div class="formulario">
+            <h2>Configuración del Script</h2>
+            <label for="groupId">ID del Grupo/Proyecto:</label>
+            <input type="text" id="groupId" placeholder="Ej: 123456">
+
+            <label for="scriptType">Tipo de Script:</label>
+            <select id="scriptType">
+                <option value="bash">Bash (Linux/macOS)</option>
+                <option value="powershell">PowerShell (Windows)</option>
+            </select>
+
+            <label for="pushAccess">¿Quién puede pushear?</label>
+            <select id="pushAccess">
+                <option value="30">Developers</option>
+                <option value="40">Maintainers</option>
+                <option value="50">Owners</option>
+            </select>
+
+            <label for="mergeAccess">¿Quién puede aceptar Merge Requests?</label>
+            <select id="mergeAccess">
+                <option value="30">Developers</option>
+                <option value="40">Maintainers</option>
+                <option value="50">Owners</option>
+            </select>
+
+            <label for="branch">Ramas protegidas (separar por comas):</label>
+            <input type="text" id="branch" placeholder="Ej: main, develop, feature/*">
+
+            <button id="generarScript">Generar Script</button>
+        </div>
+
+        <!-- Explicaciones -->
+        <div class="explicaciones">
+            <h2>Explicacion:</h2>
+            <p>Esta página permite generar y descargar un script en Bash para configurar permisos generales en un grupo/repositorio de GitLab.</p>
+
+            <h2>¿Qué hace cada configuración?</h2>
+
+            <div class="seccion">
+                <button class="toggle">Merge Request ⬇</button>
+                <p class="descripcion">Define quién tiene permisos para aprobar cambios antes de ser fusionados en una rama principal.</p>
+            </div>
+
+            <div class="seccion">
+                <button class="toggle">Push Access ⬇</button>
+                <p class="descripcion">Controla quién puede enviar código a una rama específica dentro del repositorio.</p>
+            </div>
+
+            <div class="seccion">
+                <button class="toggle">Branches protegidas ⬇</button>
+                <p class="descripcion">Evita que ciertos usuarios modifiquen o borren ramas importantes sin permisos adecuados.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./src/js/index.js"></script>
+</body>
+</html>

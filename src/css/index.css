@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+.formulario, .explicaciones {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2,h6 {
+    margin-top: 0;
+}
+
+.titulo {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacio entre la imagen y el título */
+}
+
+.titulo img {
+    width: 42px; /* Tamaño de la imagen */
+    height: auto;
+}
+
+h1 {
+    margin: 0;
+    color: #d38715;
+}
+
+img {
+    background: transparent;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #964e25;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background:  #e79924;
+}
+
+.seccion {
+    margin-top: 15px;
+}
+
+.toggle {
+    background: #964e25;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.toggle:hover {
+    background: #e79924;
+}
+
+.descripcion {
+    display: none;
+    padding: 10px;
+    background: #f9f9f9;
+    border-left: 3px solid #00ff00;
+}
